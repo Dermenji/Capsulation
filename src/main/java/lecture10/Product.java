@@ -8,6 +8,7 @@ public class Product {
   public double cost;
 
   public Product(String name, double cost) {
+
     setName(name);
     setCost(cost);
   }
