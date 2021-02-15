@@ -3,8 +3,8 @@ package lecture10;
 import lombok.Getter;
 
 @Getter
-public class Product {
-  private String name;
+ public class Product {
+  protected String name;
   private double cost;
 
   public Product(String name, double cost) {
@@ -13,7 +13,7 @@ public class Product {
     setCost(cost);
   }
 
-  private void setName(String name){
+  public final void setName(String name){
     if (name == null || name.trim().isEmpty()){
       throw new IllegalArgumentException("Product name can not be empty!");
     }

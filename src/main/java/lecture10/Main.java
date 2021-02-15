@@ -2,16 +2,18 @@ package lecture10;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static java.lang.System.*;
 
 @Slf4j
 public class Main {
   public static void main(String[] args) throws IOException {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+    out.println("");
 
     Map<String, Person> people = new  LinkedHashMap<>();
     Map<String, Product> products = new  LinkedHashMap<>();
@@ -58,6 +60,6 @@ public class Main {
         }
       }
     }
-    people.values().forEach(System.out::println);
+    people.values().forEach(out::println);
   }
 }
