@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public class Product {
   private String name;
-  public double cost;
+  private double cost;
 
   public Product(String name, double cost) {
 
